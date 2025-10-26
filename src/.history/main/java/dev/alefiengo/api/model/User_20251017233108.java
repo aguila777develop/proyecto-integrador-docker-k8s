@@ -1,4 +1,4 @@
-package dev.porfy.api.model;
+package dev.alefiengo.api.model;
 
 import jakarta.persistence.*;
 import java.io.Serializable;

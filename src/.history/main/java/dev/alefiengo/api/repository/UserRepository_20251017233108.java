@@ -1,6 +1,6 @@
-package dev.porfy.api.repository;
+package dev.alefiengo.api.repository;
 
-import dev.porfy.api.model.User;
+import dev.alefiengo.api.model.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

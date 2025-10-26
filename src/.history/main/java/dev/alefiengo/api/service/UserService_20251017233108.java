@@ -1,7 +1,7 @@
-package dev.porfy.api.service;
+package dev.alefiengo.api.service;
 
-import dev.porfy.api.model.User;
-import dev.porfy.api.repository.UserRepository;
+import dev.alefiengo.api.model.User;
+import dev.alefiengo.api.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.cache.annotation.Cacheable;

@@ -1,6 +1,5 @@
 package dev.porfy.api.controller;
 
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -43,7 +42,7 @@ public class GreetingController {
     @GetMapping("/api/info")
     public ResponseEntity<Map<String, Object>> getInfo() {
         Map<String, Object> info = new HashMap<>();
-        info.put("alumno", "PORFIRIO RAMOS FERNANDEZ");
+        info.put("alumno", "TU NOMBRE COMPLETO");
         info.put("version", "v2.1");
         info.put("curso", "Docker & Kubernetes - i-Quattro");
         info.put("timestamp", LocalDateTime.now().toString());
