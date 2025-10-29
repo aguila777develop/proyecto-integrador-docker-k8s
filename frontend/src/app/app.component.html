@@ -19,15 +19,13 @@
       <ul style="margin: 0; padding-left: 20px;">
         <li>
           <a href="https://github.com/alefiengo/proyecto-integrador-docker-k8s/blob/main/ARCHITECTURE.md#arquitectura-docker-compose-v12"
-             target="_blank"
-             style="color: #4fc3f7; text-decoration: none;">
+            target="_blank" style="color: #4fc3f7; text-decoration: none;">
             Docker Compose v1.2 (Kong Gateway)
           </a>
         </li>
         <li>
           <a href="https://github.com/alefiengo/proyecto-integrador-docker-k8s/blob/main/ARCHITECTURE.md#arquitectura-kubernetes-v20"
-             target="_blank"
-             style="color: #4fc3f7; text-decoration: none;">
+            target="_blank" style="color: #4fc3f7; text-decoration: none;">
             Kubernetes v2.0 (Ingress, HPA, StatefulSets)
           </a>
         </li>
@@ -51,23 +49,13 @@
     <form class="user-form" (ngSubmit)="createUser()">
       <div class="form-group">
         <label for="nombre">Nombre:</label>
-        <input
-          type="text"
-          id="nombre"
-          [(ngModel)]="newUser.nombre"
-          name="nombre"
-          placeholder="Ingresa el nombre"
+        <input type="text" id="nombre" [(ngModel)]="newUser.nombre" name="nombre" placeholder="Ingresa el nombre"
           required>
       </div>
 
       <div class="form-group">
         <label for="email">Email:</label>
-        <input
-          type="email"
-          id="email"
-          [(ngModel)]="newUser.email"
-          name="email"
-          placeholder="usuario@ejemplo.com"
+        <input type="email" id="email" [(ngModel)]="newUser.email" name="email" placeholder="usuario@ejemplo.com"
           required>
       </div>
 
@@ -78,10 +66,20 @@
         <button type="button" class="btn" (click)="loadUsers()" [disabled]="loading">
           Recargar Lista
         </button>
+        <button type="button" (click)="getSystemInfo()" class="btn">
+          Ver Info del Sistema
+        </button>
       </div>
     </form>
   </div>
-
+  <div *ngIf="systemInfo" class="card info-section">
+    <h3>Información del Sistema</h3>
+    <p><strong>Alumno:</strong> {{ systemInfo.alumno }}</p>
+    <p><strong>Versión:</strong> {{ systemInfo.version }}</p>
+    <p><strong>Curso:</strong> {{ systemInfo.curso }}</p>
+    <p><strong>Timestamp:</strong> {{ systemInfo.timestamp }}</p>
+    <p><strong>Pod:</strong> {{ systemInfo.hostname }}</p>
+  </div>
   <!-- Lista de usuarios -->
   <div class="card">
     <h2>Usuarios registrados ({{ users.length }})</h2>
@@ -115,7 +113,8 @@
     <p>Proyecto Integrador {{ version }} - Curso Docker & Kubernetes</p>
     <p style="font-size: 14px; opacity: 0.8;">
       <strong>Entorno:</strong> {{ environment }} |
-      <strong>Autor:</strong> <a href="https://alefiengo.dev" target="_blank" style="color: #4fc3f7; text-decoration: none;">alefiengo.dev</a>
+      <strong>Autor:</strong> <a href="https://alefiengo.dev" target="_blank"
+        style="color: #4fc3f7; text-decoration: none;">alefiengo.dev</a>
     </p>
   </div>
 </div>

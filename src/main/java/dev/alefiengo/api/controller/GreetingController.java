@@ -50,6 +50,16 @@ public class GreetingController {
         info.put("hostname", System.getenv("HOSTNAME"));
         return ResponseEntity.ok(info);
     }
+    @GetMapping("/api/prueba/info")
+    public ResponseEntity<Map<String, Object>> getInfo2() {
+        Map<String, Object> info = new HashMap<>();
+        info.put("alumno", "PORFIRIO RAMOS FERNANDEZ");
+        info.put("version", "v2.2");
+        info.put("curso", "Docker & Kubernetes - i-Quattro");
+        info.put("timestamp", LocalDateTime.now().toString());
+        info.put("hostname", System.getenv("HOSTNAME"));
+        return ResponseEntity.ok(info);
+    }
 
     private long getUptime() {
         return java.lang.management.ManagementFactory.getRuntimeMXBean().getUptime() / 1000;

@@ -21,7 +21,7 @@ FROM eclipse-temurin:17-jre-alpine
 
 # Metadata y labels de seguridad
 LABEL maintainer="porfy" \
-      version="2.0.0" \
+      version="2.1.0" \
       description="Spring Boot API - Proyecto Integrador desplegado en Kubernetes" \
       security.scan="trivy" \
       security.non-root="true"
