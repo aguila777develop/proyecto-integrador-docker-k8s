@@ -13,7 +13,7 @@
 
 ## 🛠 Parte 1: Setup del Ambiente
 **Ambiente utilizado:**
-- [VMware]
+- VMware
 - **Nombre de VM/Instancia:** porfirio-ramos-k8s
 - **Sistema operativo:** Ubuntu 24.04 LTS
 - **Recursos:** 8GB RAM, 2 CPU cores
@@ -31,15 +31,22 @@ microk8s status --wait-ready
 kubectl get all -n proyecto-integrador
 ```
  ![Pods running](screenshot/parte1-kubectl-get-all-n-proyecto-integrador.png)
+
  ![Pods running](screenshot/parte1-kubectl-get-all-n-proyecto-integrador.png)
+
  ![Frontend via MetalLB](screenshot/parte1-frontend-browser.png)
+
  ![Frontend via MetalLB](screenshot/parte1-vm.png)
+ 
  ![Frontend via MetalLB](screenshot/parte1-vm-2.png)
 
 ## 🛠 Parte 2: Backend v2.1
 ### Código Agregado
-   [Snippet del endpoint /api/info]
+
+> **Snippet del endpoint /api/info**
+
 > GreetingController.java
+
 ```java
 import org.springframework.http.ResponseEntity;
 
@@ -85,7 +92,7 @@ import org.springframework.http.ResponseEntity;
    ![API Info](screenshot/parte2-api-info.png)
 
 ## 🛠 Parte 3: Frontend v2.2
-   [Descripción de cambios en Angular]
+   **Descripción de cambios en Angular**
 > **Código modificado de Angular (screenshots de .html y .ts)**
 - app.component.html
 ```html
@@ -379,7 +386,8 @@ export class AppComponent implements OnInit {
 ## 🛠 Parte 4: Gestión de Versiones
 
 ### ¿Qué hace kubectl rollout undo?
-   [Tu explicación]
+
+kubectl rollout undo revierte un despliegue a su versión anterior, permitiendo que el sistema vuelva a un estado funcional previamente conocido. Esto se usa normalmente después de que se ha producido un error o un comportamiento inesperado tras un kubectl rollout apply o actualización del despliegue.
 
 ### Screenshots
  
@@ -449,13 +457,24 @@ IP del Ingress
 ## Conclusiones
 
 ### Aprendizajes principales
-   - Docker, Dockerfile, Docker compose
-   - Kubernetes
-
+   - Contenedores y Máquinas Virtuales
+   - Construcción de Imágenes
+   - Docker Hub
+   - Aislamiento de Aplicaciones
+   - Gestión de Volúmenes y Redes 
+   - Docker Compose
+   - Docker en Desarrollo
+   - Escalabilidad Automática 
+   - Pods y Contenedores
+   - Controladores de Replica
+   - Servicios (Services)
+   - Configuraciones y Secretos
+   - Escalabilidad y Alta Disponibilidad
+   - Kubernetes y Networking
 
 ### Dificultades encontradas
    - Tuve problemas despues de apagar no pude levantar todos los servicios. tuve que eliminar todo y ahi perdi la version 2.0 es por eso para la parte 2 tuve que crear otro endpoint en el backend /api/prueba/info 
-   - No tenia para hacer rollback, con el punto anterior pude solucionar el tema de 
+   - No tenia para hacer rollback, con el punto anterior pude solucionar el tema de rollback.
 
 ### Reflexión
 
