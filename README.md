@@ -31,10 +31,10 @@ microk8s status --wait-ready
 kubectl get all -n proyecto-integrador
 ```
  ![Pods running](screenshot/parte1-kubectl-get-all-n-proyecto-integrador.png)
- ![Pods running](/proyecto-integrador-docker-k8s/screenshot/parte1-kubectl-get-all-n-proyecto-integrador.png)
- ![Frontend via MetalLB](/proyecto-integrador-docker-k8s/screenshot/parte1-frontend-browser.png)
- ![Frontend via MetalLB](/proyecto-integrador-docker-k8s/screenshot/parte1-vm.png)
- ![Frontend via MetalLB](/proyecto-integrador-docker-k8s/screenshot/parte1-vm-2.png)
+ ![Pods running](screenshot/parte1-kubectl-get-all-n-proyecto-integrador.png)
+ ![Frontend via MetalLB](screenshot/parte1-frontend-browser.png)
+ ![Frontend via MetalLB](screenshot/parte1-vm.png)
+ ![Frontend via MetalLB](screenshot/parte1-vm-2.png)
 
 ## 🛠 Parte 2: Backend v2.1
 ### Código Agregado
@@ -60,29 +60,29 @@ import org.springframework.http.ResponseEntity;
 ```
 
 ### Screenshots
-   ![Docker build](/proyecto-integrador-docker-k8s/screenshot/parte2-docker-build.png)
+   ![Docker build](screenshot/parte2-docker-build.png)
 > Screenshot de docker images mostrando la imagen v2.1
 
-   ![Docker images](/proyecto-integrador-docker-k8s/screenshot/parte2-docker-images.png)
+   ![Docker images](screenshot/parte2-docker-images.png)
 
 > Link a la imagen en Docker Hub:: https://hub.docker.com/r/fast777/springboot-api  
 
-   ![Docker Hub](/proyecto-integrador-docker-k8s/screenshot/parte2-docker-hub-springboot-api.png)
+   ![Docker Hub](screenshot/parte2-docker-hub-springboot-api.png)
 > Screenshot de kubectl rollout status durante la actualización
-   ![Rollout](/proyecto-integrador-docker-k8s/screenshot/parte2-rollout-status.png)
-   ![Rollout](/proyecto-integrador-docker-k8s/screenshot/parte2-rollout-status2.png)
+   ![Rollout](screenshot/parte2-rollout-status.png)
+   ![Rollout](screenshot/parte2-rollout-status2.png)
 
-   ![Rollout](/proyecto-integrador-docker-k8s/screenshot/parte2-get-pods-update.png)
-   ![Rollout](/proyecto-integrador-docker-k8s/screenshot/parte2-get-pods-update2.png)
+   ![Rollout](screenshot/parte2-get-pods-update.png)
+   ![Rollout](screenshot/parte2-get-pods-update2.png)
    
 
 > Screenshot de kubectl get pods mostrando los pods con la nueva versión
 > 
-   ![get pods](/proyecto-integrador-docker-k8s/screenshot/parte2-get-pods1.png)
+   ![get pods](screenshot/parte2-get-pods1.png)
    
 > Screenshot o output de curl http://<IP-METALLB>/api/info mostrando la respuesta JSON
 
-   ![API Info](/proyecto-integrador-docker-k8s/screenshot/parte2-api-info.png)
+   ![API Info](screenshot/parte2-api-info.png)
 
 ## 🛠 Parte 3: Frontend v2.2
    [Descripción de cambios en Angular]
@@ -109,13 +109,13 @@ import org.springframework.http.ResponseEntity;
       <p style="margin: 0 0 10px 0;"><strong>📚 Documentación de Arquitectura:</strong></p>
       <ul style="margin: 0; padding-left: 20px;">
         <li>
-          <a href="https://github.com/alefiengo/proyecto-integrador-docker-k8s/blob/main/ARCHITECTURE.md#arquitectura-docker-compose-v12"
+          <a href="https://github.com/alefiengoblob/main/ARCHITECTURE.md#arquitectura-docker-compose-v12"
             target="_blank" style="color: #4fc3f7; text-decoration: none;">
             Docker Compose v1.2 (Kong Gateway)
           </a>
         </li>
         <li>
-          <a href="https://github.com/alefiengo/proyecto-integrador-docker-k8s/blob/main/ARCHITECTURE.md#arquitectura-kubernetes-v20"
+          <a href="https://github.com/alefiengoblob/main/ARCHITECTURE.md#arquitectura-kubernetes-v20"
             target="_blank" style="color: #4fc3f7; text-decoration: none;">
             Kubernetes v2.0 (Ingress, HPA, StatefulSets)
           </a>
@@ -362,19 +362,19 @@ export class AppComponent implements OnInit {
 > **Link de la imagen en Docker Hub:**
 * **https://hub.docker.com/r/fast777/angular-frontend/tags** 
 ### Screenshots
-   ![Frontend build](/proyecto-integrador-docker-k8s/screenshot/parte3-fronend-ui.png)
+   ![Frontend build](screenshot/parte3-fronend-ui.png)
    
 > **Screenshot de kubectl get pods -w durante el rolling update del frontend**
 
-   ![kubectl get pods -w](/proyecto-integrador-docker-k8s/screenshot/parte3-get-pods-w.png)
+   ![kubectl get pods -w](screenshot/parte3-get-pods-w.png)
 
 > **Screenshot del navegador mostrando el botón "Ver Info del Sistema"**
 
-   ![Ver Info del Sistema](/proyecto-integrador-docker-k8s/screenshot/parte3-button.png)
+   ![Ver Info del Sistema](screenshot/parte3-button.png)
 
 > **Screenshot del navegador mostrando la información del sistema cargada**
 
-   ![System info](/proyecto-integrador-docker-k8s/screenshot/parte3-system-info.png)
+   ![System info](screenshot/parte3-system-info.png)
 
 ## 🛠 Parte 4: Gestión de Versiones
 
@@ -385,33 +385,33 @@ export class AppComponent implements OnInit {
  
 > **Screenshot de kubectl rollout history del backend**
 
-   ![Rollforward](/proyecto-integrador-docker-k8s/screenshot/parte4-rollout-history-backend.png)
+   ![Rollforward](screenshot/parte4-rollout-history-backend.png)
 
 > **Screenshot de kubectl rollout history del frontend**
 
-   ![Rollforward](/proyecto-integrador-docker-k8s/screenshot/parte4-rollout-history-frontend.png)
+   ![Rollforward](screenshot/parte4-rollout-history-frontend.png)
 
 > **Screenshot del proceso de rollback (undo)**
 > 
-   ![Rollforward](/proyecto-integrador-docker-k8s/screenshot/parte4-rollback-undo2.png)
+   ![Rollforward](screenshot/parte4-rollback-undo2.png)
 
-   ![Rollforward](/proyecto-integrador-docker-k8s/screenshot/parte4-rollback-status.png)
+   ![Rollforward](screenshot/parte4-rollback-status.png)
 
 > **Screenshot verificando que /api/prueba/info dejó de funcionar después del rollback**
 
-   ![Rollforward](/proyecto-integrador-docker-k8s/screenshot/parte4-endpoint-404.png)
+   ![Rollforward](screenshot/parte4-endpoint-404.png)
 
 > **Screenshot del rollforward (undo --to-revision=3)**
 
-   ![Rollforward](/proyecto-integrador-docker-k8s/screenshot/parte4history-back.png)
+   ![Rollforward](screenshot/parte4history-back.png)
 
-   ![Rollforward](/proyecto-integrador-docker-k8s/screenshot/parte4-rollback-undo.png)
+   ![Rollforward](screenshot/parte4-rollback-undo.png)
 
-   ![Rollforward](/proyecto-integrador-docker-k8s/screenshot/parte4-rollback-status2.png)
+   ![Rollforward](screenshot/parte4-rollback-status2.png)
 
 > **Screenshot verificando que /api/prueba/info volvió a funcionar**
 
-   ![Rollforward](/proyecto-integrador-docker-k8s/screenshot/parte4-endpoint-api-prueba-info.png)
+   ![Rollforward](screenshot/parte4-endpoint-api-prueba-info.png)
 
 > **Explicación en tus propias palabras: ¿Qué hace kubectl rollout undo?**
 - revierte un despliegue (deployment) a la versión anterior de la aplicación.
@@ -422,29 +422,29 @@ Luego recrea los pods antiguos, reemplazando los fallidos.
 ### Screenshots   
 > **Screenshot de kubectl get ingress mostrando la IP asignada**
 
-![Rollforward](/proyecto-integrador-docker-k8s/screenshot/parte5-kubectl-get-ingress.png)
+![Rollforward](screenshot/parte5-kubectl-get-ingress.png)
 
 > **Screenshot de kubectl describe ingress mostrando las rutas configuradas**
 
-![Rollforward](/proyecto-integrador-docker-k8s/screenshot/parte5-kubectl-describe-ingress.png)
+![Rollforward](screenshot/parte5-kubectl-describe-ingress.png)
 
 > **Screenshot del navegador accediendo a http://192.168.100.156/ (frontend)**
 
-![Rollforward](/proyecto-integrador-docker-k8s/screenshot/parte5-navegador.png)
+![Rollforward](screenshot/parte5-navegador.png)
 
 > **Screenshot de curl a /api/info desde la IP de MetalLB**
 
-![Rollforward](/proyecto-integrador-docker-k8s/screenshot/parte5-api-info.png)
+![Rollforward](screenshot/parte5-api-info.png)
 
 > **Screenshot de curl a /actuator/health mostrando status UP**
 
-![Rollforward](/proyecto-integrador-docker-k8s/screenshot/parte5-health.png)
+![Rollforward](screenshot/parte5-health.png)
 
 IP del Ingress
 
    **IP del Ingress:** 192.168.100.156
 
-   ![Acceso externo](/proyecto-integrador-docker-k8s/screenshot/parte5-otra-maquina.png)
+   ![Acceso externo](screenshot/parte5-otra-maquina.png)
 
 ## Conclusiones
 
@@ -481,31 +481,31 @@ Esto te permite control de recursos y evitar conflictos de nombres.
 
 > Generar carga desde un pod busybox: kubectl run -i --tty load-generator --rm --image=busybox --restart=Never -n proyecto-integrador -- /bin/sh -c "while true; do wget -q -O- http://api-service:8080/api/users; done"
 
-![carga](/proyecto-integrador-docker-k8s/screenshot/extra1-carga.png)
+![carga](screenshot/extra1-carga.png)
 
 > En otra terminal, observar: kubectl get hpa -n proyecto-integrador -w
 
-![kubectl get hpa](/proyecto-integrador-docker-k8s/screenshot/extra1-kubectl-get-hpa.png)
+![kubectl get hpa](screenshot/extra1-kubectl-get-hpa.png)
 
 > Screenshot de HPA mostrando el incremento de CPU y replicas
 
-![hpa](/proyecto-integrador-docker-k8s/screenshot/extra-carga-incremento.png)
+![hpa](screenshot/extra-carga-incremento.png)
 
 > Screenshot de kubectl get pods -n proyecto-integrador mostrando los pods adicionales creados
 
-![kubectl get hpa](/proyecto-integrador-docker-k8s/screenshot/extra-pods-adicionales.png)
+![kubectl get hpa](screenshot/extra-pods-adicionales.png)
 
 ### Validar Health Probes
 
 - Forzar fallo del backend (kill process dentro del pod)
 
-![kubectl get hpa](/proyecto-integrador-docker-k8s/screenshot/extra-Healthforzar-fallo.png)
+![kubectl get hpa](screenshot/extra-Healthforzar-fallo.png)
 
-![kubectl get hpa](/proyecto-integrador-docker-k8s/screenshot/extra-health-kill.png)
+![kubectl get hpa](screenshot/extra-health-kill.png)
 
 - Screenshot de Kubernetes reiniciando el pod automáticamente
 
-![kubectl get hpa](/proyecto-integrador-docker-k8s/screenshot/extra-Health-reiniciando.png)
+![kubectl get hpa](screenshot/extra-Health-reiniciando.png)
 
 - Explicar cómo liveness probe detectó el fallo
 
@@ -523,18 +523,18 @@ Esto garantiza que el sistema mantenga la disponibilidad, incluso si un contened
 
 > **Eliminar el pod de PostgreSQL**
 
-![delete PostgreSQL](/proyecto-integrador-docker-k8s/screenshot/extra-persistencia-delete.png)
+![delete PostgreSQL](screenshot/extra-persistencia-delete.png)
 
 > **Verificar que los datos persisten cuando se recrea**
 
-![persisten](/proyecto-integrador-docker-k8s/screenshot/extra-get-pods.png)
+![persisten](screenshot/extra-get-pods.png)
 
-![persisten](/proyecto-integrador-docker-k8s/screenshot/extra-tabla0.png)
+![persisten](screenshot/extra-tabla0.png)
 
-![persisten](/proyecto-integrador-docker-k8s/screenshot/extra-tabla1.png)
+![persisten](screenshot/extra-tabla1.png)
 
-![persisten](/proyecto-integrador-docker-k8s/screenshot/extra-tabla2.png)
+![persisten](screenshot/extra-tabla2.png)
 
 > Prueba parte 3 aqui ya se registro tarea 8
 
-![persisten](/proyecto-integrador-docker-k8s/screenshot/parte3-fronend-ui.png)
+![persisten](screenshot/parte3-fronend-ui.png)
