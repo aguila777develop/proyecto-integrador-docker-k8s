@@ -25,12 +25,12 @@ echo "Hostname: $(hostname)"
 microk8s status --wait-ready
 
 ```
- ![microk8s status](/proyecto-integrador-docker-k8s/screenshot/parte1-microk8s-status.png)
+ ![microk8s status](screenshot/parte1-microk8s-status.png)
  
 ```bash
 kubectl get all -n proyecto-integrador
 ```
- ![Pods running](/proyecto-integrador-docker-k8s/screenshot/parte1-kubectl-get-all-n-proyecto-integrador.png)
+ ![Pods running](screenshot/parte1-kubectl-get-all-n-proyecto-integrador.png)
  ![Pods running](/proyecto-integrador-docker-k8s/screenshot/parte1-kubectl-get-all-n-proyecto-integrador.png)
  ![Frontend via MetalLB](/proyecto-integrador-docker-k8s/screenshot/parte1-frontend-browser.png)
  ![Frontend via MetalLB](/proyecto-integrador-docker-k8s/screenshot/parte1-vm.png)
